@@ -1,12 +1,17 @@
-# React + Vite
+🥗 Recipe Generator: AI-Powered Ingredient Detection and Recipe Suggestion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An end-to-end application that takes a photo of your ingredients, detects them using object detection, and generates editable recipe suggestions from the web. Perfect for when you’re staring at your fridge, unsure what to cook!
 
-Currently, two official plugins are available:
+📸 Features
+Ingredient Detection using YOLOv8 with Oriented Bounding Boxes (OBB)
+Editable Ingredient List: Easily modify the auto-detected items
+AI Recipe Suggestions: Uses web scraping or an API to suggest recipes based on selected ingredients
+Responsive UI for smooth interaction
+Cloud-Ready: Deployable on AWS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧩 How It Works
+Upload an Image of ingredients (or use a webcam snapshot)
+YOLOv8 OBB detects objects and extracts ingredient names
+The ingredients are shown in a dynamic list where users can add/remove/edit entries
+Based on the list, the system fetches recipes using web scraping or a recipe API
+Results are shown with links to full instructions
